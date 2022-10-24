@@ -1,0 +1,23 @@
+{
+  "name": "esbuild-run",
+  "version": "1.0.0",
+  "description": "Runs an esbuild config build.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jye-Dewar/esbuild-run.git"
+  },
+  "author": "Jye Dewar <JDewar.Developer@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jye-Dewar/esbuild-run/issues"
+  },
+  "homepage": "https://github.com/Jye-Dewar/esbuild-run#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "esbuild": "^0.15.12"
+  }
+}

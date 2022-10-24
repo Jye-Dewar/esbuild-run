@@ -1,0 +1,5 @@
+name: 'Esbuild Run'
+description: 'Runs esbuild'
+runs:
+  using: 'node16'
+  main: 'index.js'

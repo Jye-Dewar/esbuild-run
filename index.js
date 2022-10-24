@@ -29,6 +29,10 @@ const outDir = core.getInput("outDir");
 const fileList = getAllFiles(fileDir);
 const moduleList = getNodeModules(moduleDir);
 
+core.setOutput("file-list", fileList);
+core.setOutput("module-list", moduleList);
+core.setOutput("working-dir", process.cwd());
+
 try {
   require("esbuild")
     .build({

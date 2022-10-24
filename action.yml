@@ -13,6 +13,13 @@ inputs:
     description: 'Build Dir'
     required: true
     default: 'services/functions/lib'
+outputs:
+  file-list:
+    description: 'The list of files to build'
+  module_list:
+    descriptoin: 'The module list'
+  working-dir:
+    description: 'The working directory'
 runs:
   using: 'node16'
   main: 'index.js'

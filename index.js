@@ -22,9 +22,12 @@ const getNodeModules = function (dirPath) {
   const files = fs.readdirSync(dirPath);
   return files.filter(file => !file.includes("@"));
 };
+const fileDir = core.getInput("fileDir");
+const moduleDir = core.getInput("moduleDir");
+const outDir = core.getInput("outDir");
 
-const fileList = getAllFiles("src");
-const moduleList = getNodeModules("../../node_modules");
+const fileList = getAllFiles(fileDir);
+const moduleList = getNodeModules(moduleDir);
 
 try {
   require("esbuild")
@@ -32,7 +35,7 @@ try {
       // the entry point file described above
       entryPoints: fileList,
       // the build folder location described above
-      outdir: "lib",
+      outdir: outDir,
       bundle: true,
       // Replace with the browser versions you need to target
       platform: "node",
